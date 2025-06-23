@@ -1,0 +1,38 @@
+@model IEnumerable<ObiletBusApp.Models.ObiletJourney>
+@{
+    ViewData["Title"] = "Seferler";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/journey.css" asp-append-version="true" />
+}
+
+<div class="journey-container">
+    <div class="journey-header">
+        <a href="/?originId=@ViewBag.OriginId&from=@ViewBag.From&destinationId=@ViewBag.DestinationId&to=@ViewBag.To&date=@ViewBag.QueryDate" class="back-arrow">&#8592;</a>
+        <div>
+            <div class="route-title">@ViewBag.From - @ViewBag.To</div>
+            <div class="route-date">@ViewBag.Date</div>
+        </div>
+    </div>
+    <div class="journey-list">
+        @foreach (var j in Model)
+        {
+            <div class="journey-card">
+                <div class="journey-times">
+                    <div>
+                        <span class="label">KALKIŞ</span><br />
+                        <span class="time">@j.Journey?.Departure.ToString("HH:mm")</span>
+                    </div>
+                    <span class="arrow">&#8594;</span>
+                    <div>
+                        <span class="label">VARIŞ</span><br />
+                        <span class="time">@j.Journey?.Arrival.ToString("HH:mm")</span>
+                    </div>
+                    <div class="price">@j.Journey?.InternetPrice?.ToString("N2") TL</div>
+                </div>
+                <div class="journey-desc">@j.Journey?.Origin - @j.Journey?.Destination</div>
+            </div>
+        }
+    </div>
+</div> 

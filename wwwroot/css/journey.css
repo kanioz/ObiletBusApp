@@ -1,0 +1,96 @@
+.journey-container {
+    max-width: 480px;
+    margin: 40px auto;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+    overflow: hidden;
+}
+.journey-header {
+    background: #3450b3;
+    color: #fff;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    position: relative;
+}
+.back-arrow {
+    position: absolute;
+    left: 18px;
+    top: 28px;
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+}
+.route-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.route-date {
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+.journey-list {
+    padding: 18px 8px 24px 8px;
+}
+.journey-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 16px 18px 10px 18px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+}
+.journey-times {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.label {
+    color: #3450b3;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+.time {
+    color: #3450b3;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.arrow {
+    font-size: 1.5em;
+    color: #3450b3;
+    margin: 0 12px;
+}
+.price {
+    background: #e74c3c;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 8px 18px;
+    margin-left: auto;
+}
+.journey-desc {
+    color: #444;
+    font-size: 1.1em;
+    margin-left: 2px;
+}
+@media (max-width: 600px) {
+    .journey-container {
+        max-width: 100%;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+    }
+    .journey-header {
+        padding: 18px 0 12px 0;
+    }
+    .journey-list {
+        padding: 8px 2px 12px 2px;
+    }
+    .journey-card {
+        padding: 10px 6px 8px 6px;
+    }
+} 

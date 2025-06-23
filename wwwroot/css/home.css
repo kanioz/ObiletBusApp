@@ -1,0 +1,233 @@
+.ticket-search-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+    overflow: hidden;
+}
+.ticket-search-card {
+    background: #fff;
+    padding: 32px 16px 24px 16px;
+}
+.search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.location-group {
+    background: #fafafa;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.location-field {
+    padding: 16px 12px;
+}
+.location-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 0 12px;
+}
+.swap-btn {
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+.swap-btn i {
+    color: #a0a0a0;
+    transition: transform 0.2s;
+    transform: rotate(90deg);
+}
+.swap-btn:hover i {
+    transform: rotate(270deg);
+}
+.search-label {
+    color: #3450b3;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: block;
+}
+.search-icon {
+    color: #757c81;
+    margin-right: 6px;
+    font-size: 1.1em;
+}
+.search-input, .date-input {
+    background: transparent;
+    border: none;
+    font-size: 1.1em;
+    color: #444;
+    padding: 0;
+    margin: 0;
+    width: calc(100% - 30px);
+}
+.search-input:focus, .date-input:focus {
+    outline: none;
+}
+.date-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    padding: 16px 12px;
+}
+.date-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 12px;
+}
+.today-btn {
+    background: #5a647e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 14px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.tomorrow-btn {
+    background: #fff;
+    color: #5a647e;
+    border: 1px solid #bfc2c7;
+    border-radius: 4px;
+    padding: 4px 14px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.find-ticket-btn {
+    width: 100%;
+    background-color: #0d6efd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.info-section {
+    background: #fafafa;
+    padding: 32px 18px 24px 18px;
+    color: #757c81;
+    font-size: 16px;
+    text-align: left;
+}
+@media (max-width: 500px) {
+    .ticket-search-container {
+        max-width: 100%;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+    }
+    .ticket-search-card, .info-section {
+        padding: 18px 6px;
+    }
+    .location-row {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 6px;
+    }
+    .swap-btn-row {
+        right: 8px;
+        top: 38px;
+    }
+}
+.search-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #bfc2c7;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    z-index: 10;
+    max-height: 180px;
+    overflow-y: auto;
+    display: none;
+}
+.dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #3450b3;
+    font-size: 1em;
+}
+.dropdown-item:hover {
+    background: #f0f4ff;
+}
+.results-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    z-index: 1000;
+    width: calc(100% - 60px);
+    max-height: 200px;
+    overflow-y: auto;
+}
+.results-dropdown div {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.results-dropdown div:hover {
+    background-color: #f1f1f1;
+}
+
+.date-group label {
+    color: #3450b3;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+#btn-today, #btn-tomorrow {
+    border: 1px solid #5D686E;
+    box-shadow: none !important;
+    margin: 1px !important;
+    border-radius: 5px !important
+}
+
+.date-group .input-group-text,
+.date-group .form-control{
+    box-shadow: none !important;
+    background: none;
+    border: none !important;
+}
+
+.btn-group-vertical > .btn.btn-active {
+    background-color: #5D686E;
+    color: white;
+}
+
+.date-group .btn-group-vertical .btn {
+    border-radius: 1px !important;
+}
+
+.card-header-bar {
+    height: 54px;
+    background-color: #0d6efd;
+    margin: -32px -20px 20px -20px;
+}
